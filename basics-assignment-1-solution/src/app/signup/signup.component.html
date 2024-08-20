@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <form class="signup-form" [formGroup]="reactiveForm" (ngSubmit)="onsubmit()">
+                <h1>Signup</h1>
+                <label for="name" class="inlabels">Name</label>
+                <input type="text" class="name" id="name" placeholder="Enter your name" formControlName="name">
+                
+                <label for="email" class="inlabels">Email</label>
+                <input type="text" class="email" id="email" placeholder="Enter your email id" formControlName="email">
+                <p *ngIf="reactiveForm.get('email').invalid && reactiveForm.get('email').touched" style="color: rgb(244, 90, 90) ; ">Please Input valid email </p>
+                
+                <label for="password" class="inlabels">Password</label>
+                <input type="password" class="password" id="password" formControlName="password">
+                <p *ngIf="reactiveForm.get('password').invalid && reactiveForm.get('password').touched" style="color: rgb(231, 18, 18) ; ">Please Input valid password </p>
+                
+                <label for="num" class="inlabels">Contact Number</label>
+                <input type="text" class="num" id="num" placeholder="Enter contact no" formControlName="phone">
+                
+                <p *ngIf="reactiveForm.get('phone').invalid && reactiveForm.get('phone').touched " style="color: rgb(239, 19, 19) ;  ">Please Input valid contact no </p>
+            
+                
+                <button type="submit" class="btn" (click)=" ShowAlert()" >Signup</button>
+              </form>
+              
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,24 @@
+ <div class="maindiv">
+    <div class="main">
+      <form [formGroup]="createForm" (ngSubmit)="OnCreatepost()">
+        <h1>Create Post</h1>
+        <div class="form-group">
+          <label for="Name">Name</label>
+          <input type="text" class="form-control" formControlName="Name" id="Name" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+          <label for="Description">Description</label>
+          <textarea class="form-control" id="Description" formControlName="Description" placeholder="Enter Description"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="Image_path">Image</label>
+          <input type="file"  class="form-control" id="Image_path" formControlName="Image_path"   >
+        </div>
+        <div class="form-row">
+          <button type="submit" class="btn1 btn-primary" >Submit</button>
+          <button type="reset" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

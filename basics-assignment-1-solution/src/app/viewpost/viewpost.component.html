@@ -1,0 +1,26 @@
+<div class="maindiv" *ngIf="task">
+  <div class="main" >
+    <form >
+      <h1>Post Data</h1>
+      <hr >
+      <div class="form-group">
+        <label id="nam" class="labels"  for="Name">Name</label>
+          <p class="para">{{task.name}}</p>
+      </div>
+      <div class="form-group">
+        <label class="labels" for="Description">Description</label>
+          <p class="para">{{ task.description || 'No description' }}<p>
+      </div>
+      <div class="form-group">
+        <label class="labels"  for="Image_path">Image</label>
+      <p class="para">{{task.image_path}}<p> 
+      
+      </div>
+      <div class="form-row">
+      
+        <button type="reset" class="btn btn-primary" (click)="onCancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+

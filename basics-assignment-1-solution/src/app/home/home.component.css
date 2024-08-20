@@ -1,0 +1,19 @@
+*{
+    margin: 0px;
+    padding: 0px;
+  
+    
+}
+.one{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+img{
+    margin-left: 130px;
+}
+#img1{
+    width: 400px;
+    height: 300px;
+}
