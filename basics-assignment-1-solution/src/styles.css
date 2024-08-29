@@ -1,8 +1,0 @@
-/* You can add global styles to this file, and also import other style files */
-::ng-deep .ngx-toastr-custom {
-    background-color: #FF0000 !important;
-    color: white !important;
-    border-radius: 5px !important;
-    padding: 10px !important;
-    text-align: center !important;
-}

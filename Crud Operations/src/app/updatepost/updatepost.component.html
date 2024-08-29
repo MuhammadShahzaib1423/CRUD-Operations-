@@ -1,0 +1,89 @@
+<!-- <div class="maindiv">
+  <div class="main" *ngIf="task">
+    <form [formGroup]="UpdatereactiveForm" (ngSubmit)="onupdatePost()">
+      <h1>Update Post</h1>
+
+      <div class="form-group">
+        <label for="Name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          formControlName="name"
+          placeholder="Enter Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <textarea
+          class="form-control"
+          id="Description"
+          formControlName="description"
+          placeholder="Enter Description"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="Image_path">Image_Path</label>
+
+        <input
+          type="file"
+          class="form-control"
+          id="image_path"
+          formControlName="image_path"
+          (change)="onFileSelected($event)"
+        />
+      </div>
+
+      <div class="form-row">
+        <button type="submit" class="btn1 btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary" (click)="onCancel()">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div> -->
+<div class="maindiv">
+  <div class="main" *ngIf="task">
+    <form [formGroup]="dataForm" (ngSubmit)="onupdatePost()">
+      <h1>Update Post</h1>
+
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="Name"
+          formControlName="name"
+          placeholder="Enter Name"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea
+          class="form-control"
+          id="description"
+          formControlName="description"
+          placeholder="Enter Description"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="image_path">Image Path</label>
+        <input
+          type="file"
+          class="form-control"
+          id="image_path"
+          formControlName="image_path"
+          (change)="onFileSelected($event)"
+        />
+      </div>
+
+      <div class="form-row">
+        <button type="submit" class="btn1 btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary" (click)="onCancel()">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

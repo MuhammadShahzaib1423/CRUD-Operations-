@@ -1,0 +1,10 @@
+<nav class="nav1">
+  <h3>My App</h3>
+  <ul>
+    <li *ngIf="!authservice.IsLoggedIn()"><a routerLink="Login">Login</a></li>
+    <li *ngIf="authservice.IsLoggedIn()">
+      <a (click)="onLogout()" style="cursor: pointer">Logout</a>
+    </li>
+    <li><a routerLink="/Form">Dashboard</a></li>
+  </ul>
+</nav>

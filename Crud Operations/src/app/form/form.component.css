@@ -1,0 +1,182 @@
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-left: 120px;
+    border: 1.5px solid black;
+
+}
+
+h3 {
+    font-weight: bolder;
+}
+
+.page-link {
+    margin-left: 10px;
+
+}
+
+#first {
+    background-color: #FFA559;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+#first:hover {
+    background-color: #FC6736;
+
+}
+
+#second {
+    background-color: #7E8EF1;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+}
+
+#second:hover {
+    background-color: #379777;
+}
+
+th,
+td {
+
+
+    border: 1.5px solid black;
+    text-align: center;
+    padding: 3px;
+}
+
+
+
+.container {
+    margin-top: 100px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    width: 90%;
+
+}
+
+.btn1 {
+    background-color: #fcbb23;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.btn1:hover {
+    background-color: rgb(150, 207, 53);
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:nth-child(odd) {
+    background-color: #E0E5B6;
+}
+
+.pagination {
+    margin-left: 250px;
+}
+
+.btn1 {
+    background-color: #c5aa6a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    height: 28px;
+}
+
+.bi {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+#des {
+    width: 350px;
+    font-size: 20px;
+    text-align: center;
+    color: #2B2A4C;
+}
+
+.pager {
+    margin-right: 310px;
+}
+
+.pager a {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+#one {
+    color: #FF8225;
+    font-weight: bold;
+
+}
+
+#one:hover {
+    color: #1474f1;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#two {
+    color: #387F39;
+}
+
+#two:hover {
+    color: #3082ed;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#three {
+    color: #B43F3F;
+}
+
+#three:hover {
+    color: #ef1c0d;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+#act2 {
+    width: 60px;
+}
+
+#iml {
+    font-size: 20px;
+    width: 0px;
+    text-align: center;
+}
+
+#named {
+    width: 100px;
+    font-weight: bold;
+
+
+}
+
+#namh {
+    font-weight: bold;
+    width: 100px;
+    font-size: 20px;
+    text-align: center;
+    color: #379777
+}
+
+#act {
+    font-size: 20px;
+    text-align: center;
+    color: #0C2D57;
+
+}

@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="head">
+    <div>
+      <h3>Records Details</h3>
+    </div>
+    <div id="abc">
+      <input
+        type="text"
+        [(ngModel)]="searchQuery"
+        (input)="searchTask()"
+        placeholder="Search"
+      />
+
+      <button type="submit" class="btn1" (click)="onopencreate()">
+        Add New Record
+      </button>
+    </div>
+  </div>
+
+  <table *ngIf="Taskarray.length > 0">
+    <thead>
+      <tr>
+        <th id="namh">Name</th>
+        <th id="des">Description</th>
+        <th id="iml">Image</th>
+        <th id="act">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let task of filteredTasks">
+        <td id="named">{{ task.name || "No name" }}</td>
+        <td>{{ task.description || "No description" }}</td>
+        <td>
+          <img
+            *ngIf="task.image_path"
+            [src]="'http://127.0.0.1:8000/' + task.image_path"
+            alt="img"
+            style="width: 100px; height: 100px"
+          />
+        </td>
+        <td id="act2">
+          <a (click)="onopenview(task)"
+            ><i style="cursor: pointer" id="one" class="bi bi-eye"></i
+          ></a>
+          <a (click)="onclickUpdate(task)"
+            ><i style="cursor: pointer" id="two" class="bi bi-pencil-square"></i
+          ></a>
+          <a (click)="onopendelete(task)"
+            ><i style="cursor: pointer" id="three" class="bi bi-trash"></i
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item" [ngClass]="{ disabled: currentPage === 1 }">
+        <a
+          style="cursor: pointer"
+          id="first"
+          class="page-link"
+          (click)="previouspage()"
+          >Previous</a
+        >
+      </li>
+
+      <li
+        class="page-item"
+        [ngClass]="{ disabled: currentPage === totalPages }"
+      >
+        <a
+          style="cursor: pointer"
+          id="second"
+          class="page-link"
+          (click)="goToPage(currentPage + 1)"
+          >Next</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+  <div *ngIf="Taskarray.length === 0">
+    <p>No records found</p>
+  </div>
+
+  <app-createpost
+    *ngIf="formPopup"
+    (formPopupChange)="onclosecreate()"
+  ></app-createpost>
+
+  <app-updatepost
+    *ngIf="formPopupUpdate"
+    [task]="selectedTask"
+    (formPopupupdate)="oncloseUpdate()"
+  ></app-updatepost>
+
+  <app-deletepost
+    *ngIf="formPopupDelete"
+    [task]="selectedTask"
+    (formPopupdelete)="oncloseDelete()"
+  ></app-deletepost>
+  <app-viewpost
+    *ngIf="formPopupView"
+    [task]="selectedTask"
+    (formpopupview)="oncloseview()"
+  ></app-viewpost>
+</div>
